@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87983379710",
+    "project_id": "jujutsu-high",
+    "storage_bucket": "jujutsu-high.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87983379710:android:46ff07cca4acf302c081af",
+        "android_client_info": {
+          "package_name": "com.example.jujutsu_high"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87983379710-u66c334dsclg5barufvic0egf9dfruoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDiXRAH7s833W_BgC7w7xnITYAQKSVfx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87983379710-u66c334dsclg5barufvic0egf9dfruoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
