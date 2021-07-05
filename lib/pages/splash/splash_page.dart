@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -9,19 +8,11 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  void initializeFirebase() async {
-    try {
-      await Firebase.initializeApp();
-      Navigator.pushNamed(context, '/login');
-    } catch (e) {
-      Navigator.pushNamed(context, '/errorPage');
-    }
-  }
-
-  @override
   void initState() {
-    initializeFirebase();
     super.initState();
+    Future.delayed(Duration(seconds: 4), () {
+      Navigator.pushReplacementNamed(context, '/login');
+    });
   }
 
   @override
@@ -29,28 +20,46 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color: Colors.black,
+        color: Color(0XFF011629),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
               alignment: Alignment.topLeft,
               width: 300,
               height: 200,
-              color: Color(0XFF262432),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Color(0XFF50518F),
+                    Color(0XFF262432),
+                  ],
+                ),
+              ),
             ),
             Text(
               "Jujutsu Sorcery School",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 32,
+                fontSize: 36,
               ),
             ),
             Container(
               alignment: Alignment.bottomRight,
               width: 300,
               height: 200,
-              color: Color(0XFF50518F),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Color(0XFF262432),
+                    Color(0XFF50518F),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
